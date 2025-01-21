@@ -1,23 +1,13 @@
 
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-
-from author.views import AuthorViewSet
-
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from author.views import AuthorViewSet
-
-from rest_framework.routers import DefaultRouter
 from .views import AuthorViewSet
 
 router = DefaultRouter()
-router.register(r'authors', AuthorViewSet)
+router.register(r"movies", AuthorViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path("", include(router.urls)),
 ]
 
-
 app_name = "author"
-
